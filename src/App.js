@@ -1,10 +1,9 @@
-import Home from "./Pages/Home";
-import "./App.css";
-import { Routes, Route } from "react-router-dom";
-import Sidebar from "./component/Sidebar";
-import UserDetails from "./Pages/UserDetails";
-import Header from "./component/Header";
-
+import Home from './Pages/Home';
+import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Sidebar from './component/Sidebar';
+import UserDetails from './Pages/UserDetails';
+import Header from './component/Header';
 
 function App() {
   return (

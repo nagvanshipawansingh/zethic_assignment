@@ -1,24 +1,20 @@
 .header {
-    width: 100%;
-    height: 55px;
-    background-color: rgb(234, 234, 234);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-
+  width: 100%;
+  height: 55px;
+  background-color: rgb(234, 234, 234);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .charts {
-    width: 100%;
-    display:  flex;
-    justify-content: space-around;
-    
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
-
 
 .headerHome > a {
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
 }
-

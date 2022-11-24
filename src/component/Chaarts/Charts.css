@@ -1,15 +1,14 @@
 .carMakerChart {
-    height: 100vh;
-    
+  height: 100vh;
 }
 
 .countryChart {
   height: 100vh;
-    margin-top: 50px;
-    margin-bottom: 100px;
-    border-bottom: 1px solid rgb(173, 170, 170);
-  }
+  margin-top: 50px;
+  margin-bottom: 100px;
+  border-bottom: 1px solid rgb(173, 170, 170);
+}
 
-  .carAgeChart {
-    margin-top: 80px;
+.carAgeChart {
+  margin-top: 80px;
 }

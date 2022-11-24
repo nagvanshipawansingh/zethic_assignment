@@ -1,38 +1,37 @@
-
 @keyframes hideUserDetailPage {
-    0%{
-        visibility: visible;
-    }
-    100%{
-        visibility: hidden;
-    }
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
 }
 
 @keyframes showUserDetailPage {
-    0%{
-        visibility: hidden;
-    }
-    100%{
-        visibility: visible;
-    }
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
 }
 
 @keyframes hideSingalDetailPage {
-    0%{
-        transform: translate(0,0);
-    }
-    100%{
-        transform: translate(100%,0);
-    }
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(100%, 0);
+  }
 }
 
 @keyframes showSingalDetailPage {
-    0%{
-        transform: translate(100%,0);
-    }
-    100%{
-        transform: translate(0,0);
-    }
+  0% {
+    transform: translate(100%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 .userDetailsBefore {
@@ -83,7 +82,7 @@
   color: white;
   position: absolute;
   right: 0;
-  transform: translate(0, 0); 
+  transform: translate(0, 0);
   animation: showSingalDetailPage 0.3s linear 1;
 }
 
