@@ -18,25 +18,25 @@ function UserDetails(props) {
           <h2>{`${useData?.username?.firstname} ${useData?.username?.lastname}`}</h2>
         </div>
         <div className="userNameDetails">
-          <h4>Age:</h4>
-          <h4>Email Id:</h4>
-          <h4>Phone Number:</h4>
+          <h4>Age: {useData?.age}</h4>
+          <h4>Email Id: {useData?.email}</h4>
+          <h4>Phone Number: {useData?.phoneNumber}</h4>
           <h4>Occupation:</h4>
-          <p><strong>Job Descriptor :</strong></p>
-          <p><strong>Job Type:</strong></p>
-          <p><strong>Job Area:</strong></p>
-          <p><strong>Title:</strong></p>
+          <p><strong>Job Descriptor: {useData?.occupation?.jobDescriptor}</strong></p>
+          <p><strong>Job Type: {useData?.occupation?.jobType}</strong></p>
+          <p><strong>Job Area: {useData?.occupation?.jobArea}</strong></p>
+          <p><strong>Title: {useData?.occupation?.title}</strong></p>
 
           <h4>Vehicle: </h4>
-          <p><strong>Age:</strong></p>
-          <p><strong>Manufacturer:</strong></p>
-          <p><strong>Model:</strong></p>
+          <p><strong>Age: {useData?.vehicle?.age}</strong></p>
+          <p><strong>Manufacturer: {useData?.vehicle?.manufacturer}</strong></p>
+          <p><strong>Model: {useData?.vehicle?.model}</strong></p>
           <h4>Address:</h4>
-          <p><strong>Street:</strong></p>
-          <p><strong>City:</strong></p>
-          <p><strong>State:</strong></p>
-          <p><strong>Country:</strong></p>
-          <p><strong>Zip Code:</strong></p>
+          <p><strong>Street: {useData?.address?.street}</strong></p>
+          <p><strong>City: {useData?.address?.city}</strong></p>
+          <p><strong>State: {useData?.address?.state}</strong></p>
+          <p><strong>Country: {useData?.address?.country}</strong></p>
+          <p><strong>Zip Code: {useData?.address?.zipCode}</strong></p>
         </div>
       </div>
     </div>

@@ -37,7 +37,10 @@ function Sidebar() {
     
   
   return (<>
-     <UserDetails showDiv={showDiv} hideUseRef={hideUseRef}/> 
+  <div>
+       <UserDetails showDiv={showDiv} hideUseRef={hideUseRef}/> 
+  </div>
+    
      <div className="sidebar">
      
      <div className="userList">
