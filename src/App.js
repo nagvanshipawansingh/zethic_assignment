@@ -11,7 +11,6 @@ function App() {
       <Header />
       <div className="App_component">
         <Sidebar />
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/userdetails" element={<UserDetails />} />
