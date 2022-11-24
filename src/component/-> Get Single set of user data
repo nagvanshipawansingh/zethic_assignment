@@ -1,0 +1,9 @@
+-> Get Single set of user data
+    -> id: uuid
+    -> age: getRandomArbitraryNumber
+    -> ...rest: faker
+-> n number of user data
+    -> itrate for n number of times
+    -> generate single user for n number of times
+
+->n number of user data function call

@@ -1,0 +1,114 @@
+
+@keyframes hideUserDetailPage {
+    0%{
+        visibility: visible;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+
+@keyframes showUserDetailPage {
+    0%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+}
+
+@keyframes hideSingalDetailPage {
+    0%{
+        transform: translate(0,0);
+    }
+    100%{
+        transform: translate(100%,0);
+    }
+}
+
+@keyframes showSingalDetailPage {
+    0%{
+        transform: translate(100%,0);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
+
+.userDetailsBefore {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: rgba(26, 26, 26, 0.8);
+  visibility: hidden;
+  animation: hideUserDetailPage 0.3s linear 1;
+}
+
+.userDetailsAfter {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: rgba(26, 26, 26, 0.8);
+  display: block;
+  visibility: visible;
+  animation: showUserDetailPage 0.3s linear 1;
+}
+.singleDetailsBefore {
+  height: 100%;
+  width: 30%;
+  overflow-y: auto;
+  background-color: rgb(35, 30, 30);
+  color: white;
+  position: absolute;
+  right: 0;
+  transform: translate(100%, 0);
+  animation: hideSingalDetailPage 0.3s linear 1;
+}
+
+.singleDetailsAfter {
+  height: 100%;
+  width: 30%;
+  overflow-y: auto;
+  background-color: rgb(35, 30, 30);
+  color: white;
+  position: absolute;
+  right: 0;
+  transform: translate(0, 0); 
+  animation: showSingalDetailPage 0.3s linear 1;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  border: 1px solid rgb(71, 63, 63);
+  padding: 10px;
+}
+
+.userNameDetails {
+  margin-left: 20px;
+  border: 1px solid rgb(71, 63, 63);
+  padding: 10px;
+}
+
+.userNameDetails > h4 {
+  margin-top: 30px;
+  border: 1px solid rgb(71, 63, 63);
+  padding: 10px;
+  /* display: inline; */
+}
+
+.userNameDetails > p {
+  margin-left: 15px;
+  margin-top: 5px;
+}

@@ -1,0 +1,39 @@
+.sidebar {
+    height: 90vh;
+    flex: 0.2;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    padding-top: 10px;
+    flex-direction: column;
+    
+}
+
+.userList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid gray;
+}
+
+.userName {
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+    box-shadow:  2px 2px 5px rgb(124, 140, 145);
+    cursor: pointer;
+    
+}
+
+.userName > a {
+    text-decoration: none;
+    color: black;
+}
