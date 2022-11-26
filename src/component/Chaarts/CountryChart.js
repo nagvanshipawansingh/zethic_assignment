@@ -1,8 +1,16 @@
 import React from 'react';
 import Chart from 'react-apexcharts';
+import { useSelector } from 'react-redux';
 import './Charts.css';
 
 function CountryChart() {
+  const countryData = useSelector((state) => state.data.chartDetails.countryVsUser);
+  console.log(countryData);
+  if (Object.keys(countryData).length === 0) return <></>;
+  // console.log(Object.keys(countryData));
+  const countries = Object.keys(countryData);
+  console.log(countries);
+
   return (
     <div className="countryChart">
       <Chart

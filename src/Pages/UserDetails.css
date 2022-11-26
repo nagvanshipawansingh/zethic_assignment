@@ -42,7 +42,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: 999;
+  z-index: 999999;
   background-color: rgba(26, 26, 26, 0.8);
   visibility: hidden;
   animation: hideUserDetailPage 0.3s linear 1;
@@ -56,7 +56,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: 999;
+  z-index: 999999;
   background-color: rgba(26, 26, 26, 0.8);
   display: block;
   visibility: visible;
@@ -76,7 +76,7 @@
 
 .singleDetailsAfter {
   height: 100%;
-  width: 30%;
+  width: 35%;
   overflow-y: auto;
   background-color: rgb(35, 30, 30);
   color: white;
@@ -101,8 +101,10 @@
 }
 
 .userNameDetails > h4 {
+  font-size: large;
+  color: aliceblue;
   margin-top: 20px;
-  border: 1px solid rgb(71, 63, 63);
+  border-bottom: 1px solid rgb(71, 63, 63);
   padding: 10px;
   /* display: inline; */
 }
@@ -110,4 +112,10 @@
 .userNameDetails > p {
   margin-left: 15px;
   margin-top: 5px;
+}
+
+.span {
+  /* font-size: medium; */
+  font-weight: 300;
+  margin-left: 5px;
 }

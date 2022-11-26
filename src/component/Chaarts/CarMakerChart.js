@@ -17,7 +17,7 @@ function CarMakerChart() {
 
           labels: ['Hindi', 'Math', 'Science', 'Computer', 'English', 'History']
         }}
-      ></Chart>
+      />
     </div>
   );
 }

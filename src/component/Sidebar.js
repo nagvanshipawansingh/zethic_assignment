@@ -50,7 +50,7 @@ function Sidebar() {
           height={600}
           rowHeight={40}
           rowCount={userName.length}
-          rowRenderer={({ key, index, style, parent }) => {
+          rowRenderer={({ index, style }) => {
             const person = userName[index];
 
             return (

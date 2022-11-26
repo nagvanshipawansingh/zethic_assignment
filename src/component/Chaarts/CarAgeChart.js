@@ -1,20 +1,8 @@
 import React from 'react';
 import Chart from 'react-apexcharts';
 import './Charts.css';
-import { useSelector } from 'react-redux';
 
 function CarAgeChart() {
-  let userCount = 0;
-
-  const allData = useSelector((state) => state.data.initialData);
-  const countryData = allData.map((elem) => elem.address.country);
-  for (let element of countryData) {
-    for (let j = 1; j < countryData.length; j++) {
-      if (element === countryData[j]) {
-      }
-    }
-  }
-
   return (
     <div className="carAgeChart">
       <Chart

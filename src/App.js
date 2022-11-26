@@ -2,10 +2,17 @@ import Home from './Pages/Home';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Sidebar from './component/Sidebar';
-import UserDetails from './Pages/UserDetails';
 import Header from './component/Header';
+import { useDispatch } from 'react-redux';
+import React from 'react';
+import { generateUserChartData } from './Redux/dataSlice';
 
 function App() {
+  const dispatch = useDispatch();
+  React.useEffect(() => {
+    dispatch(generateUserChartData());
+  }, []);
+
   return (
     <div className="App">
       <Header />
@@ -13,7 +20,6 @@ function App() {
         <Sidebar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/userdetails" element={<UserDetails />} />
         </Routes>
       </div>
     </div>

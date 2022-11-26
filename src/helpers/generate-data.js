@@ -13,7 +13,7 @@ export const generate = () => ({
     lastname: faker.name.lastName()
   },
   email: faker.internet.email(),
-  age: getRandomArbitraryNumber(18, 90),
+  age: getRandomArbitraryNumber(20, 90),
   phoneNumber: faker.phone.number(),
   address: {
     street: faker.address.street(),
@@ -25,7 +25,7 @@ export const generate = () => ({
   vehicle: {
     manufacturer: faker.vehicle.manufacturer(),
     model: faker.vehicle.model(),
-    age: getRandomArbitraryNumber(0, 15)
+    age: getRandomArbitraryNumber(0, 5)
   },
   occupation: {
     title: faker.name.jobTitle(),
