@@ -10,7 +10,6 @@ function Home() {
       <div className="home">
         <CountryChart />
         <CarMakerChart />
-        <hr />
         <CarAgeChart />
       </div>
     </>

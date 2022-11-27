@@ -58,23 +58,13 @@ function Sidebar() {
                 className="userName"
                 key={person.id}
                 style={style}
-                onClick={() => showUserDetails(person.id)}
-              >
+                onClick={() => showUserDetails(person.id)}>
                 <h4>
                   {`${person.username.firstname} ${person.username.lastname} (${person.age})`}
                 </h4>
               </div>
             );
-          }}
-        ></List>
-
-        {/* {
-     userName.map((data) => {
-       return  <div className='userName' key={data.id}>
-       <NavLink to='/userdetails'><h4>{data.username.firstname} {data.username.firstname}</h4></NavLink>
-       </div>
-     })
-   } */}
+          }}></List>
       </div>
     </>
   );

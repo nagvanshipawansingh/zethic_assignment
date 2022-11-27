@@ -16,8 +16,7 @@ function CarAgeChart() {
           noData: { text: 'Empty data', style: { fontSize: 20 } },
 
           labels: ['Hindi', 'Math', 'Science', 'Computer', 'English', 'History']
-        }}
-      ></Chart>
+        }}></Chart>
     </div>
   );
 }

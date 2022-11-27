@@ -3,15 +3,22 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Sidebar from './component/Sidebar';
 import Header from './component/Header';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import React from 'react';
-import { generateUserChartData } from './Redux/dataSlice';
+import { generateUserChartData, generateUserData } from './Redux/dataSlice';
 
 function App() {
   const dispatch = useDispatch();
+  const initialData = useSelector((state) => state.data.initialData);
   React.useEffect(() => {
-    dispatch(generateUserChartData());
+    dispatch(generateUserData(500));
   }, []);
+
+  React.useEffect(() => {
+    if (initialData.length > 0) {
+      dispatch(generateUserChartData());
+    }
+  }, [initialData]);
 
   return (
     <div className="App">

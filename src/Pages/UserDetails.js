@@ -7,7 +7,7 @@ function UserDetails(propType) {
   const userDetailsClass = showDiv ? 'userDetailsAfter' : 'userDetailsBefore';
   const singleDetailsClass = showDiv ? 'singleDetailsAfter' : 'singleDetailsBefore';
 
-  const useData = useSelector((state) => state.data.userDetais);
+  const useData = useSelector((state) => state.data.userDetails);
 
   return (
     <div className={userDetailsClass}>

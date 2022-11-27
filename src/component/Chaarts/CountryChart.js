@@ -15,7 +15,7 @@ function CountryChart() {
     <div className="countryChart">
       <Chart
         type="bar"
-        width={1200}
+        width="100%"
         height={600}
         series={[
           {
@@ -78,8 +78,7 @@ function CountryChart() {
               }
             }
           ]
-        }}
-      ></Chart>
+        }}></Chart>
     </div>
   );
 }
