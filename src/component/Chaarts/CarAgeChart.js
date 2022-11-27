@@ -1,21 +1,24 @@
 import React from 'react';
 import Chart from 'react-apexcharts';
+import { useSelector } from 'react-redux';
 import './Charts.css';
 
 function CarAgeChart() {
+  const carAge = useSelector((state) => state.data.chartDetails.carAge);
+  if (Object.keys(carAge).length === 0) return <></>;
+  console.log({ carAge });
+
   return (
     <div className="carAgeChart">
       <Chart
         type="pie"
-        width={1200}
+        width="100%"
         height={600}
-        series={[65, 45, 54, 34, 67, 87]}
+        series={Object.values(carAge)}
         options={{
           title: { text: 'Chart on the basis of  cars age', style: { fontSize: 20 } },
-
           noData: { text: 'Empty data', style: { fontSize: 20 } },
-
-          labels: ['Hindi', 'Math', 'Science', 'Computer', 'English', 'History']
+          labels: Object.keys(carAge).map((age) => `${age} years`)
         }}></Chart>
     </div>
   );

@@ -1,5 +1,8 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useOnClickOutside } from '../../Hooks/useOnClickOutside';
+import { filter } from '../../Redux/dataSlice';
+import './filter.css';
 
 const userAgeRange = [
   {
@@ -32,26 +35,52 @@ const userAgeRange = [
   }
 ];
 
+const generateText = (min, max) => `${min} - ${max}`;
+
 const Filter = () => {
+  const dispatch = useDispatch();
   const [showFilterOption, setShowFilterOption] = React.useState(false);
   const filterRef = React.useRef();
+  const filterName = useSelector((state) => state.data.filterName);
+
   useOnClickOutside(filterRef, () => {
     setShowFilterOption(false);
   });
 
+  const onFilter = (range) => (event) => {
+    event.preventDefault();
+    const rangeText = generateText(range.min, range.max);
+    const payload = {
+      min: range.min,
+      max: range.max,
+      name: rangeText
+    };
+    dispatch(filter(payload));
+  };
+
   return (
     <div className="headerFilter">
-      <div onClick={() => setShowFilterOption(!showFilterOption)}>FILTER</div>
+      <div className="filterButton" onClick={() => setShowFilterOption(!showFilterOption)}>
+        FILTER
+      </div>
       {showFilterOption ? (
         <div className="filterOptions" ref={filterRef}>
           <div className="filterInfo">
             <h3>Filter options</h3>
+            <h5>{`(User age range)`}</h5>
           </div>
 
           <div className="filterOptionAge">
             {userAgeRange.map((range) => {
-              const rangeText = `${range.min} - ${range.max}`;
-              return <div key={rangeText}>{rangeText}</div>;
+              const rangeText = generateText(range.min, range.max);
+              return (
+                <h4
+                  onClick={onFilter(range)}
+                  key={rangeText}
+                  className={filterName === rangeText ? 'activeAge' : ''}>
+                  {rangeText}
+                </h4>
+              );
             })}
           </div>
         </div>

@@ -1,0 +1,16 @@
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+.userName {
+    margin-top: 30px;
+}
+
+.userName > h4 {
+    margin-left: 10px;
+}

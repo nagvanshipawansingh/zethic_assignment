@@ -18,6 +18,10 @@ const countryList = [
   'Australia'
 ];
 
+const carList = Array.from(Array(10).keys()).map(() => {
+  return faker.vehicle.manufacturer();
+});
+
 /**
  * Generate data for single user
  * @returns {object}
@@ -42,7 +46,9 @@ export const generate = () => ({
     country: faker.helpers.arrayElement(countryList)
   },
   vehicle: {
-    manufacturer: faker.vehicle.manufacturer(),
+    // Restricting car manufacturer to only select from 10 cars instead of unknown number of car brands
+    // manufacturer: faker.vehicle.manufacturer()
+    manufacturer: faker.helpers.arrayElement(carList),
     model: faker.vehicle.model(),
     age: getRandomArbitraryNumber(0, 5)
   },

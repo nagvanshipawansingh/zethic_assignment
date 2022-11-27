@@ -8,11 +8,35 @@ function CountryChart() {
   if (Object.keys(countryData).length === 0) return <></>;
   console.log(countryData);
 
+  const options = {
+    series: [
+      {
+        data: Object.values(countryData)
+      }
+    ],
+    chart: {
+      type: 'bar',
+      height: 350
+    },
+    plotOptions: {
+      bar: {
+        borderRadius: 4,
+        horizontal: true
+      }
+    },
+    dataLabels: {
+      enabled: false
+    },
+    xaxis: {
+      categories: Object.keys(countryData)
+    }
+  };
+
   return (
     <div className="countryChart">
       <Chart
         type="bar"
-        width="50%"
+        width="100%"
         height={600}
         series={[
           {
@@ -20,50 +44,8 @@ function CountryChart() {
             data: Object.values(countryData)
           }
         ]}
-        options={{
-          title: {
-            text: 'User vs Country Bar Chart',
-            style: { fontSize: 20 }
-          },
-
-          xaxis: {
-            categories: Object.keys(countryData),
-            title: {
-              text: 'Bar chart according to which country users belong',
-              offsetX: 0,
-              offsetY: 90,
-              style: {
-                color: '#008FFB',
-                fontSize: '16px'
-              }
-            }
-          },
-
-          yaxis: [
-            {
-              axisTicks: {
-                show: true
-              },
-              axisBorder: {
-                show: true,
-                color: '#008FFB'
-              },
-              labels: {
-                style: {
-                  colors: '#008FFB',
-                  fontSize: '12px'
-                }
-              },
-              title: {
-                text: 'Income (thousand crores)',
-                style: {
-                  color: '#008FFB',
-                  fontSize: '16px'
-                }
-              }
-            }
-          ]
-        }}></Chart>
+        options={options}
+      />
     </div>
   );
 }

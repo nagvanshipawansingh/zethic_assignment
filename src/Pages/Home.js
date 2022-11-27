@@ -9,7 +9,9 @@ function Home() {
   return (
     <>
       <div className="home">
-        <Filter />
+        <div className="filterWrapper">
+          <Filter />
+        </div>
         <CountryChart />
         <CarMakerChart />
         <CarAgeChart />

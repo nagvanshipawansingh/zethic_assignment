@@ -6,7 +6,8 @@
 export const generateChart = (users) => {
   const filteredUsersInformation = {
     countryVsUser: {},
-    carManufacturer: {}
+    carManufacturer: {},
+    carAge: {}
   };
 
   users.forEach((user) => {
@@ -22,6 +23,13 @@ export const generateChart = (users) => {
       filteredUsersInformation.carManufacturer[user.vehicle.manufacturer] += 1;
     } else {
       filteredUsersInformation.carManufacturer[user.vehicle.manufacturer] = 1;
+    }
+
+    // Getting Car Age
+    if (Boolean(filteredUsersInformation.carAge[user.vehicle.age])) {
+      filteredUsersInformation.carAge[user.vehicle.age] += 1;
+    } else {
+      filteredUsersInformation.carAge[user.vehicle.age] = 1;
     }
   });
 

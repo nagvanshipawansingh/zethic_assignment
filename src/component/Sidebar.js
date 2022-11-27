@@ -1,11 +1,11 @@
 import React, { useRef, useState } from 'react';
 import './Sidebar.css';
 import { useSelector } from 'react-redux';
-import { List } from 'react-virtualized';
 import UserDetails from '../Pages/UserDetails';
 import { useDispatch } from 'react-redux';
 import { userData } from '../Redux/dataSlice';
 import { useOnClickOutside } from '../Hooks/useOnClickOutside';
+import { List } from 'react-virtualized';
 
 function Sidebar() {
   const userName = useSelector((state) => state.data.initialData);
@@ -23,24 +23,23 @@ function Sidebar() {
     setShowdiv(false);
   });
   return (
-    <>
+    <div className="sidebar">
       <div>
         <UserDetails showDiv={showDiv} hideUseRef={hideUseRef} />
       </div>
 
-      <div className="sidebar">
+      <div className="sidebarUser">
         <div className="userList">
           <h2>User List</h2>
         </div>
 
         <List
           width={300}
-          height={600}
-          rowHeight={40}
+          height={300}
+          rowHeight={50}
           rowCount={userName.length}
           rowRenderer={({ index, style }) => {
             const person = userName[index];
-
             return (
               <div
                 className="userName"
@@ -52,9 +51,10 @@ function Sidebar() {
                 </h4>
               </div>
             );
-          }}></List>
+          }}
+        />
       </div>
-    </>
+    </div>
   );
 }
 

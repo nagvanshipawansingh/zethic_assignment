@@ -10,6 +10,7 @@
   grid-area: main;
   height: 90vh;
   overflow: auto;
+  width: 100%;
 }
 
 .App {
