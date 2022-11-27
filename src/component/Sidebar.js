@@ -35,7 +35,7 @@ function Sidebar() {
 
         <List
           width={300}
-          height={300}
+          height={500}
           rowHeight={50}
           rowCount={userName.length}
           rowRenderer={({ index, style }) => {

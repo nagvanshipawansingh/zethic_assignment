@@ -4,20 +4,22 @@ import './FilterUserByManufacturer.css';
 
 function FilterUserByManufacturer() {
   const userData = useSelector((state) => state.data.filteredUserByCarDetails);
-  console.log(userData);
+  console.log({ userData });
   return (
     <div className="main">
       <div className="carManufacturer">
         <h2>List of Users</h2>
       </div>
-      {userData.map((user) => {
-        return (
-          <div key={userData.id} className="userName">
-            <h4>{`${user.username.firstname} ${user.username.lastname}`}</h4>
-            <h4> Email: {user.email}</h4>
-          </div>
-        );
-      })}
+      <div className="userDetails">
+        {userData.map((user) => {
+          return (
+            <div key={userData.id} className="user">
+              <h4>{`${user.username.firstname} ${user.username.lastname} (${user.age})`}</h4>
+              <div className="userEmail"> {`Email: ${user.email}`}</div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap');
+
+
+
 .header {
   grid-area: header;
   height: 10vh;
@@ -18,4 +22,6 @@
   grid-template-areas:
     'header header header header header header'
     'menu main main main main main';
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Raleway', sans-serif; 
 }

@@ -1,5 +1,6 @@
 .carDetails {
   width: 100%;
+  height: 100%;
   background-color: rgb(218, 223, 223);
 }
 
@@ -7,7 +8,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid black;
+  border-bottom: 0.5px solid black;
 }
 
 .carDetails_heading > h2 {
@@ -18,17 +19,23 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
   cursor: pointer;
+  background-color: rgb(218, 223, 223);
+  border-bottom: 1px solid aliceblue;
+  padding: 10px;
 }
 
+.carDetails_maker:hover{
+  background-color: aliceblue;
+}
+
+.carDetails_maker.isActiveCarDetails {
+  background-color: #ffffff;
+  border-bottom: 0.5px solid rgb(218, 223, 223);
+}
 .carDetails_maker > h3 {
   display: flex;
-  justify-content: center;
-  padding: 5px;
-  border-radius: 10px;
-  background-color: aliceblue;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .isActiveCarDetails {

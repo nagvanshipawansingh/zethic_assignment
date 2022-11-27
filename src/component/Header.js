@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.css';
 import { Link, useLocation } from 'react-router-dom';
+import zethic from '../component/ZethicLogo/zethic.png';
 
 function Header() {
   const location = useLocation();
@@ -9,9 +10,13 @@ function Header() {
   };
   return (
     <div className="header">
-      <div className="headerLogo">
-        <h2>Zethic Assignment</h2>
+      <div className="zethicLogo">
+        <div className="headerLogo">
+          <img src={zethic} alt="" srcSet="" />
+        </div>
+        <h4>Assignment</h4>
       </div>
+
       <div className="headerHome">
         <Link to="/" className={injectActive('/')}>
           Home
