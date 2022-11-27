@@ -8,14 +8,12 @@ import { userData } from '../Redux/dataSlice';
 
 function Sidebar() {
   const userName = useSelector((state) => state.data.initialData);
-  console.log(userName);
   const [showDiv, setShowdiv] = useState(false);
 
   const dispatch = useDispatch();
 
   const showUserDetails = (id) => {
     dispatch(userData(id));
-    console.log(id);
     setShowdiv(true);
   };
 

@@ -2,7 +2,21 @@ import { faker } from '@faker-js/faker';
 import { v4 as uuidv4 } from 'uuid';
 import { getRandomArbitraryNumber } from './randomArbitraryNumber';
 
-const countryList = ['India', 'USA', 'Britain', 'Nepal', 'Sri Lanka', 'Maldives', 'UK'];
+const countryList = [
+  'India',
+  'Russia',
+  'Japan',
+  'Nepal',
+  'Sri Lanka',
+  'Maldives',
+  'UK',
+  'Myanmar',
+  'China',
+  'USA',
+  'Israel',
+  'France',
+  'Australia'
+];
 
 /**
  * Generate data for single user

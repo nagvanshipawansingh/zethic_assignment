@@ -5,44 +5,29 @@ import './Charts.css';
 
 function CountryChart() {
   const countryData = useSelector((state) => state.data.chartDetails.countryVsUser);
-  console.log(countryData);
   if (Object.keys(countryData).length === 0) return <></>;
-  // console.log(Object.keys(countryData));
-  const countries = Object.keys(countryData);
-  console.log(countries);
+  console.log(countryData);
 
   return (
     <div className="countryChart">
       <Chart
         type="bar"
-        width="100%"
+        width="50%"
         height={600}
         series={[
           {
             name: 'Country Users chart',
-            data: [2000, 4000, 6000, 8000, 9000, 12000, 13000, 15000, 18000, 35000, 7500]
+            data: Object.values(countryData)
           }
         ]}
         options={{
           title: {
-            text: 'This chart is develope for Zethic assignment ',
+            text: 'User vs Country Bar Chart',
             style: { fontSize: 20 }
           },
 
           xaxis: {
-            categories: [
-              'China',
-              'Nepal',
-              'U.K',
-              'U.S.A',
-              'Russia',
-              'Afghanistan',
-              'Bhutan',
-              'Bangladesh',
-              'Myanmar',
-              'India ',
-              'Sri Lanka '
-            ],
+            categories: Object.keys(countryData),
             title: {
               text: 'Bar chart according to which country users belong',
               offsetX: 0,
