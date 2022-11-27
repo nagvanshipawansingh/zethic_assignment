@@ -2,6 +2,8 @@ import { faker } from '@faker-js/faker';
 import { v4 as uuidv4 } from 'uuid';
 import { getRandomArbitraryNumber } from './randomArbitraryNumber';
 
+const countryList = ['India', 'USA', 'Britain', 'Nepal', 'Sri Lanka', 'Maldives', 'UK'];
+
 /**
  * Generate data for single user
  * @returns {object}
@@ -20,7 +22,10 @@ export const generate = () => ({
     city: faker.address.city(),
     state: faker.address.state(),
     zipCode: faker.address.zipCode(),
-    country: faker.address.country()
+    // Restricting country because chart is unable to showcase the data of users
+    // where country list have (195 random selected country's)
+    // country: faker.address.country()
+    country: faker.helpers.arrayElement(countryList)
   },
   vehicle: {
     manufacturer: faker.vehicle.manufacturer(),
