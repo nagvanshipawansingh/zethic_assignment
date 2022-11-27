@@ -1,10 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './Sidebar.css';
 import { useSelector } from 'react-redux';
 import { List } from 'react-virtualized';
 import UserDetails from '../Pages/UserDetails';
 import { useDispatch } from 'react-redux';
 import { userData } from '../Redux/dataSlice';
+import { useOnClickOutside } from '../Hooks/useOnClickOutside';
 
 function Sidebar() {
   const userName = useSelector((state) => state.data.initialData);
@@ -18,20 +19,9 @@ function Sidebar() {
   };
 
   const hideUseRef = useRef();
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (hideUseRef.current && !hideUseRef.current.contains(event.target)) {
-        setShowdiv(false);
-      }
-    }
-    // Bind the event listener
-    document.addEventListener('mousedown', handleClickOutside, false);
-    return () => {
-      // Unbind the event listener on clean up
-      document.removeEventListener('mousedown', handleClickOutside, false);
-    };
-  }, []);
-
+  useOnClickOutside(hideUseRef, () => {
+    setShowdiv(false);
+  });
   return (
     <>
       <div>

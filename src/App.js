@@ -10,6 +10,7 @@ import { generateUserChartData, generateUserData } from './Redux/dataSlice';
 function App() {
   const dispatch = useDispatch();
   const initialData = useSelector((state) => state.data.initialData);
+
   React.useEffect(() => {
     dispatch(generateUserData(500));
   }, []);
@@ -23,8 +24,8 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Sidebar />
       <div className="App_component">
-        <Sidebar />
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
